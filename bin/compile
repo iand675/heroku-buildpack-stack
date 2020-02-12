@@ -13,7 +13,7 @@ function speak (){
   echo "-----> $(date -u '+%Y-%m-%d_%H:%M:%S') $1"
 }
 
-speak "Starting..."
+speak "Starting with BUILD_DIR=${BUILD_DIR} CACHE_DIR=${CACHE_DIR} ENV_DIR=${ENV_DIR}..."
 
 BLACKLIST_REGEX="^(PATH|GIT_DIR|CPATH|CPPATH|LD_PRELOAD|LIBRARY_PATH)$"
 if [ -d "$ENV_DIR" ]; then
